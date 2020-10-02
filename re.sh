@@ -14,10 +14,12 @@ then
     # Move the current execution state to the proper directory
     cd /etc/apache2/sites-available
 
-    if [ -z "$CONFIG" ]
+    VHOSTS_PATH = /etc/apache2/sites-available
+
+    if [ "$CONFIG" -ne  $VHOSTS_PATH ]
     then
         #Return an error message if argument $1 is zero or empty
-        echo "ERROR: $1 is empty. Virtual host file does not exist"
+        echo "ERROR: File $1 does not exist in the directory"
         exit 1
     fi
 
