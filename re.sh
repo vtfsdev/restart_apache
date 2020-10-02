@@ -16,12 +16,11 @@ then
 
     VHOSTS_PATH = /etc/apache2/sites-available
 
-    if [ "$CONFIG" -ne "$VHOSTS_PATH" ]
-    then
+    for "$CONFIG" not in $VHOSTS_PATH
+    do
         #Return an error message if argument $1 is zero or empty
         echo "ERROR: File $1 does not exist in the directory"
-        exit 1
-    fi
+    done
 
     # Disable a vhost configuration
     sudo a2dissite "$CONFIG"
