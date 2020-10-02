@@ -16,7 +16,7 @@ then
 
     VHOSTS_PATH = /etc/apache2/sites-available
 
-    if [ "$CONFIG" -ne  "$VHOSTS_PATH" ]
+    if [ "$CONFIG" -ne "$VHOSTS_PATH" ]
     then
         #Return an error message if argument $1 is zero or empty
         echo "ERROR: File $1 does not exist in the directory"
