@@ -14,7 +14,7 @@ then
     # Move the current execution state to the proper directory
     cd /etc/apache2/sites-available
 
-    if [-z "$1"]
+    if [-z "$CONFIG"]
     then
         #Return an error message if argument $1 is zero or empty
         echo "ERROR: $1 is empty. Virtual host file does not exist"
